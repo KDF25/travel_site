@@ -1,0 +1,99 @@
+.cta {
+    min-height: 580px;
+    padding: 100px 0 35px;
+    color: #0F1F1C;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+    
+    @include mediaTablet($displayWidth1){
+        display: none;
+    }
+}
+
+.cta__container {
+    max-width: 1240px;
+    height: 581px;
+    border-radius: 60px;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: url("./../img/cta/cta-el-02.svg");
+        // transform: translate(50%, 0%);
+        width: 63px;
+        height: 83px;
+        z-index: 9;
+        left: 74px;
+        bottom: 56px;
+    }
+
+    &::after{
+        position: absolute;
+        content: url("./../img/cta/cta-el-01.svg");
+        // transform: translate(50%, 0%);
+        width: 63px;
+        height: 83px;
+        z-index: 9;
+        right: 74px;
+        top: 56px;
+    }
+}
+
+.cta__content{
+    margin-top: 116px;
+    left: auto;
+    width: 715px;
+}
+
+.cta__title {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.cta__text {
+    color: rgba(15, 31, 28, 0.5);
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+.cta__btn {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 25px 54px;
+    border-radius: 27px;
+    background: linear-gradient(130deg, #FF7B4E 15.57%, #FF584E 95.03%);
+
+    &:hover{
+        color: rgb(245, 233, 127);
+        transition: color 0.3s ease-in;
+    }
+
+    &:active{
+        position: relative;
+        top: 1px
+    }
+}
+
+.cta__icon {
+    width: 63px;
+    height: 83px;
+
+}
+
+.cta__icon-right{
+
+}
+
+.cta__icon-left{
+    left: -74px;
+    
+}

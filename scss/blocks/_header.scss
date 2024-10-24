@@ -1,0 +1,228 @@
+.header{
+    overflow: hidden;
+    min-height: 940px;
+    background: linear-gradient(132deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    padding-top: 44px;
+    color: #FFF;
+    position: relative;
+    font-family: Poppins;
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 96px;
+        background-image: url('./../../img/header/Vector.svg');
+        background-size: 100%;
+
+    }
+
+    a{
+        color: inherit;
+    }
+
+    @include mediaTablet($displayWidth1){
+        padding-top: 20px;
+        min-height: unset;
+    }
+
+
+}
+
+.header__top{
+    margin-bottom: 86px;
+    @include mediaTablet($displayWidth1){
+        margin-bottom: 40px;
+    }
+}
+.header__row{
+    display: flex;
+
+    @include mediaTablet($displayWidth1){
+        flex-direction: column;
+    }
+
+}
+
+.header__content{
+    max-width: 592px;
+    position: relative;
+    z-index: 1;
+}
+
+.header__badge {
+    font-size: 18px;
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 12px 31px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    margin-bottom: 7px;
+
+
+    @include mediaTablet($displayWidth1){
+        font-size: 16px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        padding: 8px 20px;
+    }
+}
+
+.header_title {
+    font-size: 55px;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+    @include mediaTablet($displayWidth1){
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+}
+.header__text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 68px;
+
+    @include mediaTablet($displayWidth1){
+        font-size: 20px;
+        margin-bottom: 40px;
+        max-width: 400px;
+    }
+}
+
+.header_btn {
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 27px 48px;
+    border-radius: 27px;
+    background: linear-gradient(130deg, #FF7B4E 15.57%, #FF584E 95.03%);
+
+    &:hover{
+        color: rgb(245, 233, 127);
+        transition: color 0.3s ease-in;
+    }
+
+    &:active{
+        position: relative;
+        top: 1px
+    }
+
+    @include mediaTablet($displayWidth1){
+        font-size: 18px;
+        padding: 20px 35px;
+        border-radius: 20px;
+    }
+}
+
+.header__nav-btn{
+    display: none;
+
+    @include mediaTablet($displayWidth1){
+        display: block;
+        z-index: 10;
+    }
+}
+
+
+.header__img{
+    position: relative;
+    flex-grow: 1;
+
+    img{
+        top: -180px;
+        right: -100px;
+        position: absolute;
+        max-width: unset;
+        width: 894px;
+        height: 940px;
+
+        @include mediaTablet($displayWidth1){
+            position: static;
+            width: 70%;
+            height: auto;
+        }
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: -100px;
+        width: 830px;
+        height: 622px;
+        background-image: url('./../../img/header/header-elements.svg');
+        background-size: 100%;
+        pointer-events: none;
+
+        @include mediaTablet($displayWidth1){
+            top: 70px;
+            width: 90%;
+            left: -30px;
+        }
+    }
+
+    
+}
+
+
+.nav--mobile{
+    position: fixed;
+    background: linear-gradient(132deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+
+
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        font-size: 22px;
+
+        a.active::after, a:hover::after{
+            display: none;
+        }
+    }
+
+    .nav__login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        font-size: 22px;
+
+    }
+    .logo{
+        font-size: 34px;
+    }
+
+    .header__nav-btn{
+        position: fixed;
+        top: 50px;
+        right: 15px;
+    }
+
+
+
+
+}
+

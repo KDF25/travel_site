@@ -1,0 +1,126 @@
+.costumers {
+    padding: 100px 0 100px;
+    color: #0F1F1C;
+    position: relative;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: normal;
+    overflow-x: hidden;
+
+    @include mediaTablet($displayWidth1){
+        padding: 50px 0 50px;
+    }
+
+    @include mediaTablet($displayWidth2){
+        padding: 25px 0 25px;
+    }
+}
+
+.costumers__row {
+    display: flex;
+    column-gap: 68px;
+
+    @include mediaTablet($displayWidth1){
+        column-gap: 30px;
+    }
+
+    @include mediaTablet($displayWidth2){
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+
+}
+.costumers__img {
+    max-width: 478px;
+
+    img{
+        border-radius: 35px;
+        @include mediaTablet($displayWidth1){
+        max-width: 250px;
+        }
+
+        @include mediaTablet($displayWidth2){
+            max-width: 100%;
+        }
+        
+    }
+}
+
+.costumers__content {
+    max-width: 565px;
+}
+
+.costumers__title {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 35px;
+
+    @include mediaTablet($displayWidth1){
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+}
+
+.costumers__description {
+    display: flex;
+    column-gap: 33px;
+    margin-bottom: 60px;
+
+    @include mediaTablet($displayWidth1){
+        margin-bottom: 20px;
+    }
+
+
+}
+
+.costumers__icon {
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+    background: linear-gradient(130deg, #FF7B4E 15.57%, #FF584E 95.03%);
+
+    @include mediaTablet($displayWidth1){
+        width: 80px;
+        height: 80px;
+    }
+
+}
+.costumers__info {
+    font-size: 33px;
+    font-weight: 500;
+
+    span{
+        margin-top: 10px;
+        color: rgba(15, 31, 28, 0.5);
+        font-size: 25px;
+        font-weight: 400;
+
+        @include mediaTablet($displayWidth1){
+            font-size: 18px;
+        }
+    }
+
+    @include mediaTablet($displayWidth1){
+        font-size: 25px;
+    }
+
+}
+.costumers__feedback {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(15, 31, 28, 0.5);
+    margin-bottom: 30px;
+
+    @include mediaTablet($displayWidth1){
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+.coustumers__stars {
+    max-width: 327px;
+
+    @include mediaTablet($displayWidth1){
+        max-width: 200px;
+    }
+}
